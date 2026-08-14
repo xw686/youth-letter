@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>一封跨越105年的青春来信</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#1a1a1a;display:flex;justify-content:center;align-items:center;min-height:100vh;}
+.app{width:100%;max-width:420px;height:100vh;max-height:800px;position:relative;overflow:hidden;border-radius:12px;box-shadow:0 0 40px rgba(0,0,0,0.4);background:#1a0508;}
+.pg{position:absolute;top:0;left:0;right:0;bottom:0;padding:24px 20px 32px;display:none;flex-direction:column;align-items:center;text-align:center;opacity:0;transition:opacity .5s;overflow-y:auto;}
+.pg.on{display:flex;opacity:1;}
+.bk{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.2);border:1px solid rgba(212,175,55,.3);color:#d4af37;padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer;z-index:100;}
+.prog{position:absolute;top:0;left:0;right:0;height:3px;background:rgba(212,175,55,.1);z-index:200;}
+.prog div{height:100%;background:linear-gradient(90deg,#c41e3a,#d4af37);transition:width .5s;width:0%;}
+.btn-r{background:linear-gradient(135deg,#e63946,#c41e3a);color:#fff;border:none;padding:14px 36px;border-radius:28px;font-size:15px;font-weight:500;cursor:pointer;margin-top:20px;box-shadow:0 4px 20px rgba(230,57,70,.4);transition:all .3s;letter-spacing:2px;}
+.btn-r:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(230,57,70,.6);}
+.btn-o{background:transparent;color:#8b0000;border:2px solid #8b0000;padding:12px 32px;border-radius:28px;font-size:15px;font-weight:500;cursor:pointer;margin-top:10px;transition:all .3s;letter-spacing:2px;}
+.btn-o:hover{background:rgba(139,0,0,.05);}
+
+/* ===== P1 ===== */
+.p1{background:linear-gradient(180deg,#0a1628,#1a2a4a,#0f1d35);}
+.star{position:absolute;background:#ffd700;border-radius:50%;animation:twinkle 2s infinite;}
+@keyframes twinkle{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+.desk{position:relative;width:100%;height:250px;margin:14px 0;}
+.lamp{position:absolute;left:10px;top:35px;width:70px;height:110px;}
+.lh{width:55px;height:35px;background:linear-gradient(180deg,#2c2c2c,#1a1a1a);border-radius:28px 28px 3px 3px;position:relative;}
+.ll{position:absolute;top:30px;left:-15px;width:85px;height:85px;background:radial-gradient(ellipse,rgba(255,215,100,.28),transparent 70%);border-radius:50%;}
+.la{width:3px;height:45px;background:#3a3a3a;margin:0 auto;}
+.lb{width:26px;height:8px;background:#2c2c2c;border-radius:3px;margin:0 auto;}
+.env{position:absolute;right:18px;top:55px;width:165px;height:105px;background:linear-gradient(135deg,#c41e3a,#8b0000);border-radius:3px;transform:rotate(-8deg);box-shadow:0 8px 28px rgba(196,30,58,.5),0 0 50px rgba(255,215,100,.12);cursor:pointer;transition:transform .4s;}
+.env:hover{transform:rotate(-5deg) scale(1.03);}
+.env::before{content:"";position:absolute;top:0;left:0;right:0;height:52px;background:linear-gradient(135deg,#d42b4a,#a01020);clip-path:polygon(0 0,50% 100%,100% 0);border-bottom:1px solid rgba(255,215,100,.35);}
+.est{position:absolute;top:6px;right:6px;width:28px;height:36px;background:linear-gradient(135deg,#d4af37,#b8860b);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#8b0000;font-weight:700;border:1px dashed #8b0000;}
+.elb{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#ffd700;font-size:14px;font-weight:500;letter-spacing:2px;text-shadow:0 2px 8px rgba(0,0,0,.5);}
+.books{position:absolute;bottom:0;left:18px;}
+.book{width:65px;height:11px;background:linear-gradient(180deg,#5a3a1a,#3d2610);border-radius:2px;margin-bottom:2px;border-left:3px solid #8b4513;}
+.papers{position:absolute;bottom:0;right:25px;width:70px;height:35px;background:linear-gradient(180deg,#e8d5a8,#d4c494);border-radius:2px;transform:rotate(5deg);box-shadow:0 2px 6px rgba(0,0,0,.25);}
+.t1{font-size:24px;font-weight:700;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5);letter-spacing:2px;margin-top:14px;line-height:1.4;}
+.s1{font-size:14px;color:rgba(255,255,255,.85);margin-top:10px;line-height:1.8;}
+.fy{position:absolute;bottom:14px;font-size:11px;color:rgba(255,215,100,.35);letter-spacing:3px;}
+
+/* ===== P2 ===== */
+.p2{background:linear-gradient(180deg,#f5e6c8,#e8d5a8);}
+.ink{font-size:26px;font-weight:700;color:#8b4513;margin-bottom:16px;letter-spacing:3px;}
+.sheet{background:linear-gradient(180deg,#faf0d8,#f0e0c0);border:1px solid rgba(139,69,19,.15);border-radius:4px;padding:24px 20px;max-width:340px;box-shadow:0 4px 18px rgba(0,0,0,.1);text-align:left;color:#4a2c1a;font-size:14px;line-height:2;max-height:420px;overflow-y:auto;position:relative;}
+.sheet::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#c41e3a,#d4af37,#c41e3a);}
+.sh{font-size:12px;color:#8b7355;margin-bottom:10px;border-bottom:1px dashed #d4af37;padding-bottom:6px;}
+.fp{position:absolute;bottom:-12px;right:-5px;width:60px;height:60px;opacity:.45;}
+
+/* ===== P3 交互地图 ===== */
+.p3{background:linear-gradient(180deg,#f0e6d0,#e8dcc8);}
+.t3{font-size:30px;font-weight:800;color:#8b0000;margin-top:6px;margin-bottom:4px;letter-spacing:4px;}
+.s3{font-size:13px;color:#8b7355;margin-bottom:12px;letter-spacing:2px;}
+.mapb{width:320px;height:270px;margin:8px auto;position:relative;background:rgba(212,175,55,.06);border-radius:10px;border:1px solid rgba(139,69,19,.12);overflow:hidden;}
+.map-svg{position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);width:250px;height:200px;}
+.md{position:absolute;width:18px;height:18px;background:#e63946;border:2px solid #ffd700;border-radius:50%;cursor:pointer;animation:pulse 2s infinite;box-shadow:0 0 14px rgba(230,57,70,.7);z-index:5;display:flex;align-items:center;justify-content:center;transition:transform .3s;}
+.md:hover{transform:scale(1.3);}
+.md::after{content:"";position:absolute;width:5px;height:5px;background:#fff;border-radius:50%;}
+.md .rp{position:absolute;width:100%;height:100%;border:2px solid #e63946;border-radius:50%;animation:rp 2s infinite;}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+@keyframes rp{0%{transform:scale(1);opacity:.8}100%{transform:scale(2.5);opacity:0}}
+.ml{position:absolute;font-size:11px;color:#8b4513;font-weight:600;letter-spacing:1px;background:rgba(255,255,255,.75);padding:1px 5px;border-radius:3px;}
+.pop{position:absolute;left:50%;transform:translateX(-50%) scale(.85);top:8px;background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(250,240,216,.96));border:2px solid #c41e3a;border-radius:10px;padding:12px 18px;box-shadow:0 8px 22px rgba(0,0,0,.2);opacity:0;transition:all .4s cubic-bezier(.34,1.56,.64,1);z-index:10;min-width:170px;pointer-events:none;}
+.pop.show{opacity:1;transform:translateX(-50%) scale(1);}
+.pop .py{font-size:10px;color:#d4af37;font-weight:600;margin-bottom:2px;letter-spacing:1px;}
+.pop .pt{font-size:15px;font-weight:700;color:#8b0000;margin-bottom:3px;}
+.pop .px{font-size:12px;color:#5a3a1a;line-height:1.5;}
+.boat3{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);width:110px;height:48px;}
+.boat3 .cb{position:absolute;bottom:18px;left:16px;width:78px;height:28px;background:linear-gradient(180deg,#a0522d,#8b4513);border-radius:4px 4px 0 0;border-top:2px solid #d4af37;}
+.boat3 .bb{width:100%;height:18px;background:linear-gradient(180deg,#8b4513,#5a2d0c);border-radius:0 0 55px 55px;box-shadow:0 3px 10px rgba(0,0,0,.2);}
+.boat3 .bf{position:absolute;bottom:48px;left:26px;width:18px;height:14px;background:#e63946;clip-path:polygon(0 0,100% 50%,0 100%);animation:wave 2s ease-in-out infinite;transform-origin:left center;}
+@keyframes wave{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+.boat3 .bw{position:absolute;bottom:-5px;left:-15px;right:-15px;height:8px;background:linear-gradient(180deg,rgba(139,69,19,.12),transparent);border-radius:50%;}
+.hint3{font-size:12px;color:#8b7355;margin:6px 0 10px;display:flex;align-items:center;gap:5px;opacity:.8;}
+.v3{background:rgba(139,0,0,.08);border-left:4px solid #c41e3a;padding:12px 16px;margin:10px auto 8px;max-width:300px;text-align:left;border-radius:0 8px 8px 0;position:relative;}
+.v3::before{content:"❝";position:absolute;top:2px;right:10px;font-size:22px;color:rgba(196,30,58,.12);}
+.v3 .vl{font-size:14px;color:#8b0000;font-weight:600;line-height:1.9;letter-spacing:1px;}
+.da{background:#ffd700 !important;border-color:#c41e3a !important;box-shadow:0 0 18px rgba(255,215,0,.8) !important;}
+.btn-d{opacity:.35;pointer-events:none;}
+.btn-d.on{opacity:1;pointer-events:auto;}
+
+/* ===== P4 ===== */
+.p4{background:linear-gradient(180deg,#0a1628,#1a2a4a);}
+.t4{font-size:22px;font-weight:700;color:#ffd700;margin-bottom:3px;letter-spacing:2px;}
+.s4{font-size:12px;color:rgba(255,255,255,.65);margin-bottom:14px;}
+.scr{width:310px;height:190px;margin:12px auto;position:relative;}
+.srt,.srb{width:100%;height:26px;background:linear-gradient(180deg,#d4af37,#b8860b);border-radius:13px;position:relative;}
+.srt::after,.srb::after{content:"";position:absolute;right:-7px;top:50%;transform:translateY(-50%);width:16px;height:32px;background:linear-gradient(180deg,#8b4513,#5a2d0c);border-radius:8px;}
+.srb{transform:rotate(180deg);}
+.sp{width:90%;margin:0 auto;height:138px;background:linear-gradient(180deg,#f5e6c8,#e8d5a8);position:relative;overflow:hidden;}
+.tln{position:absolute;left:50%;top:14px;bottom:14px;width:2px;background:linear-gradient(180deg,transparent,#c41e3a,#d4af37,transparent);}
+.ttg{position:absolute;background:linear-gradient(135deg,#f5e6c8,#e8d5a8);border:1px solid #c41e3a;padding:4px 8px;border-radius:4px;font-size:10px;color:#8b0000;font-weight:500;cursor:pointer;transition:all .3s;box-shadow:0 2px 6px rgba(0,0,0,.12);white-space:nowrap;}
+.ttg:hover{transform:scale(1.05);box-shadow:0 4px 14px rgba(196,30,58,.3);}
+.ttg .y{font-size:8px;color:#8b7355;display:block;margin-bottom:1px;}
+.ws{width:14px;height:14px;background:#8b0000;border-radius:50%;position:absolute;box-shadow:0 1px 3px rgba(0,0,0,.25);}
+.eb{background:rgba(245,230,200,.14);border:1px solid rgba(212,175,55,.3);border-radius:8px;padding:12px;max-width:290px;margin:6px auto;font-size:13px;color:#f5e6c8;min-height:46px;display:flex;align-items:center;justify-content:center;}
+
+/* ===== P5 ===== */
+.p5{background:linear-gradient(180deg,#4a0a10,#2d0a10);}
+.g5{font-size:36px;font-weight:800;background:linear-gradient(180deg,#ffd700,#d4af37,#b8860b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:5px;line-height:1.15;margin:6px 0;filter:drop-shadow(0 2px 6px rgba(212,175,55,.25));}
+.sg5{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:310px;margin:16px auto;}
+.sc5{background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(245,230,200,.95));border:2px solid rgba(139,0,0,.12);border-radius:8px;padding:16px 10px;cursor:pointer;transition:all .3s;position:relative;}
+.sc5:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.25);border-color:#c41e3a;}
+.sc5 .t5{font-size:16px;font-weight:700;color:#8b0000;margin-bottom:4px;}
+.sc5 .d5{font-size:11px;color:#5a3a1a;line-height:1.55;display:none;}
+.sc5.o .d5{display:block;}
+.wsd{position:absolute;top:-7px;right:-7px;width:20px;height:20px;background:#8b0000;border-radius:50%;border:2px solid #d4af37;box-shadow:0 1px 4px rgba(0,0,0,.2);}
+
+/* ===== P6 故事卡片 ===== */
+.p6{background:linear-gradient(180deg,#f5e6c8,#e8d5a8);}
+.t6{font-size:26px;font-weight:800;color:#8b0000;margin-top:6px;margin-bottom:3px;letter-spacing:2px;}
+.s6{font-size:12px;color:#8b7355;margin-bottom:16px;letter-spacing:1px;}
+.g6{display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:340px;margin:0 auto;}
+.c6{background:linear-gradient(180deg,#faf0d8,#f0e0c0);border-radius:8px;overflow:hidden;cursor:pointer;transition:all .3s;box-shadow:0 2px 8px rgba(0,0,0,.08);position:relative;border:1px solid rgba(139,69,19,.1);}
+.c6:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.15);}
+.ed6{position:absolute;top:0;right:10px;width:32px;height:22px;background:linear-gradient(135deg,#c9a06c,#a67c52);clip-path:polygon(0 0,50% 70%,100% 0,100% 100%,0 100%);z-index:3;box-shadow:0 2px 4px rgba(0,0,0,.12);}
+.wx6{position:absolute;top:5px;left:5px;width:16px;height:16px;background:#8b0000;border-radius:50%;border:2px solid #d4af37;box-shadow:0 1px 3px rgba(0,0,0,.15);z-index:4;}
+.i6{width:100%;height:88px;display:flex;align-items:center;justify-content:center;position:relative;}
+.i6.f{background:linear-gradient(135deg,#c0392b,#8b0000);}
+.i6.r{background:linear-gradient(135deg,#d4a574,#a67c52);}
+.i6.h{background:linear-gradient(135deg,#e8a87c,#c0392b);}
+.i6.d{background:linear-gradient(135deg,#5dade2,#1a5276);}
+.i6 svg{width:44px;height:44px;}
+.b6{padding:10px 8px 12px;text-align:center;}
+.b6 .tt6{font-size:14px;font-weight:700;color:#8b0000;margin-bottom:4px;letter-spacing:1px;}
+.b6 .tl6{font-size:10px;color:#8b7355;}
+
+/* ===== P7 ===== */
+.p7{background:linear-gradient(180deg,#faf8f0,#f0ece0);}
+.ch7{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.cl7{width:34px;height:34px;background:linear-gradient(135deg,#1a5276,#0d2b45);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:700;}
+.cn7{font-size:13px;font-weight:700;color:#1a5276;text-align:left;}
+.cn7 span{font-size:9px;color:#8b7355;display:block;font-weight:400;}
+.t7{font-size:26px;font-weight:700;color:#8b0000;margin:4px 0;letter-spacing:2px;}
+.cb7{width:100%;max-width:330px;height:60px;background:linear-gradient(180deg,rgba(212,175,55,.15),transparent);border-radius:8px 8px 0 0;margin:0 auto;position:relative;}
+.bs7{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:170px;height:45px;background:linear-gradient(180deg,#d4c494,#b8a880);clip-path:polygon(20% 100%,20% 40%,35% 40%,35% 20%,45% 20%,45% 0,55% 0,55% 20%,65% 20%,65% 40%,80% 40%,80% 100%);}
+.st7{display:flex;gap:8px;width:100%;max-width:330px;margin:0 auto 14px;}
+.sp7{flex:1;height:120px;border-radius:6px;overflow:hidden;position:relative;}
+.sp7.l{background:linear-gradient(180deg,#e8f4f8,#d0e8f0);}
+.sp7.s{background:linear-gradient(180deg,#fff8e8,#f0e8d0);}
+.sp7.v{background:linear-gradient(180deg,#ffe8e8,#f0d0d0);}
+.si7{font-size:28px;margin-top:16px;}
+.sl7{position:absolute;bottom:8px;left:0;right:0;font-size:11px;color:#5a3a1a;font-weight:500;}
+.bq7{font-size:16px;font-weight:700;color:#8b0000;margin:10px 0;}
+
+/* ===== P8 ===== */
+.p8{background:linear-gradient(180deg,#f5e6c8,#e8d5a8);}
+.idc8{width:100%;max-width:310px;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(250,240,216,.9));border:1px solid rgba(139,69,19,.1);border-radius:12px;padding:14px 16px;margin:8px auto;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .3s;box-shadow:0 2px 6px rgba(0,0,0,.06);}
+.idc8:hover,.idc8.pk{border-color:#c41e3a;box-shadow:0 4px 14px rgba(196,30,58,.15);transform:translateX(4px);}
+.idc8.pk{background:linear-gradient(135deg,rgba(196,30,58,.08),rgba(250,240,216,.95));}
+.ic8{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,#f5e6c8,#e8d5a8);border:2px solid #d4af37;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+.in8{text-align:left;flex:1;}
+.in8 .nm8{font-size:16px;font-weight:700;color:#8b0000;}
+.idb8{display:inline-block;background:#c41e3a;color:#fff;padding:2px 10px;border-radius:10px;font-size:11px;margin-top:3px;}
+
+/* ===== P9 ===== */
+.p9{background:linear-gradient(180deg,#e8e0d0,#d8d0c0);position:relative;}
+.p9::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 23px,rgba(139,69,19,.05) 24px);pointer-events:none;}
+.nh9{background:linear-gradient(135deg,#f5e6c8,#e8d5a8);border:2px solid #8b4513;padding:12px;max-width:310px;margin:0 auto 12px;position:relative;}
+.nh9::before,.nh9::after{content:"✦";position:absolute;top:5px;color:#d4af37;font-size:13px;}
+.nh9::before{left:6px;}.nh9::after{right:6px;}
+.et9{font-size:16px;font-weight:700;color:#8b0000;line-height:1.4;}
+.ee9{width:46px;height:32px;background:linear-gradient(135deg,#d4af37,#b8860b);margin:8px auto;position:relative;clip-path:polygon(0 0,50% 40%,100% 0,100% 100%,0 100%);}
+.ee9::after{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:12px;height:12px;background:#8b0000;border-radius:50%;border:2px solid #d4af37;}
+.ac9{width:100%;max-width:310px;background:linear-gradient(135deg,rgba(255,255,255,.95),rgba(250,240,216,.95));border:1px solid rgba(139,69,19,.15);border-radius:6px;padding:11px 13px;margin:5px auto;display:flex;align-items:center;gap:11px;cursor:pointer;transition:all .3s;text-align:left;}
+.ac9:hover,.ac9.pk{border-color:#c41e3a;box-shadow:0 3px 10px rgba(196,30,58,.12);background:linear-gradient(135deg,rgba(196,30,58,.05),rgba(250,240,216,.98));}
+.al9{width:28px;height:28px;border-radius:50%;border:2px solid #c41e3a;color:#c41e3a;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;}
+.ac9.pk .al9{background:#c41e3a;color:#fff;}
+.at9{font-size:14px;font-weight:500;color:#4a2c1a;}
+
+/* ===== P10 ===== */
+.p10{background:linear-gradient(180deg,#1a0f00,#3d2408,#1a0f00);position:relative;}
+.spk{position:absolute;width:3px;height:3px;background:#ffd700;border-radius:50%;animation:spk 3s infinite;}
+@keyframes spk{0%,100%{opacity:0;transform:scale(0)}50%{opacity:1;transform:scale(1)}}
+.t10{font-size:20px;font-weight:700;color:#e63946;margin-top:14px;letter-spacing:2px;}
+.mf10{width:270px;height:340px;margin:14px auto;position:relative;background:linear-gradient(135deg,#faf0d8,#f0e0c0);border:3px solid #d4af37;border-radius:4px;padding:24px 18px;box-shadow:0 8px 36px rgba(212,175,55,.2);}
+.mf10::before,.mf10::after{content:"";position:absolute;width:22px;height:22px;border:3px solid #d4af37;}
+.mf10::before{top:-3px;left:-3px;border-right:none;border-bottom:none;}
+.mf10::after{bottom:-3px;right:-3px;border-left:none;border-top:none;}
+.pm10{position:absolute;top:10px;right:10px;width:42px;height:42px;border:2px solid #c41e3a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:#c41e3a;font-weight:700;transform:rotate(-15deg);opacity:.65;}
+.mt10{font-size:18px;line-height:2;color:#8b4513;font-weight:500;margin-top:14px;font-family:"KaiTi","STKaiti",serif;}
+.mff10{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:10px;color:#8b7355;}
+
+/* ===== P11 ===== */
+.p11{background:linear-gradient(180deg,#4a0008,#2d0005,#1a0003);position:relative;overflow:hidden;}
+.flp{position:absolute;width:26px;height:34px;background:linear-gradient(135deg,rgba(245,230,200,.55),rgba(232,213,168,.35));border-radius:2px;animation:fp 6s linear infinite;}
+@keyframes fp{0%{transform:translateY(120%) rotate(0deg);opacity:0}10%{opacity:.65}90%{opacity:.65}100%{transform:translateY(-20%) rotate(360deg);opacity:0}}
+.t11{font-size:18px;font-weight:700;color:#e63946;margin-top:18px;letter-spacing:3px;}
+.ec11{width:120px;height:120px;margin:24px auto;position:relative;filter:drop-shadow(0 0 24px rgba(212,175,55,.45));}
+.er11{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:120px;height:120px;border:2px solid rgba(212,175,55,.3);border-radius:50%;animation:spin 18s linear infinite;}
+@keyframes spin{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.fv11{font-size:15px;line-height:2.1;color:#f5e6c8;font-weight:500;letter-spacing:2px;}
+.fv11 span{color:#ffd700;font-weight:700;}
+.fs11{font-size:13px;color:#d4af37;margin-top:14px;letter-spacing:3px;}
+
+/* ===== P12 ===== */
+.p12{background:linear-gradient(180deg,#faf8f0,#f0ece0);}
+.t12{font-size:26px;font-weight:700;color:#8b0000;margin-top:8px;margin-bottom:4px;letter-spacing:2px;}
+.s12{font-size:12px;color:#8b7355;margin-bottom:14px;}
+.sl12{width:290px;margin:14px auto;position:relative;}
+.sen12{width:100%;height:34px;background:linear-gradient(135deg,#e8d5a8,#d4c494);position:relative;clip-path:polygon(0 0,50% 80%,100% 0,100% 100%,0 100%);border-radius:4px 4px 0 0;}
+.sw12{position:absolute;top:16px;left:12px;width:22px;height:22px;background:#8b0000;border-radius:50%;border:2px solid #d4af37;display:flex;align-items:center;justify-content:center;color:#ffd700;font-size:9px;z-index:5;}
+.spp12{background:linear-gradient(180deg,#faf0d8,#f0e0c0);padding:26px 18px 18px;border-radius:0 0 4px 4px;box-shadow:0 4px 18px rgba(0,0,0,.1);position:relative;}
+.spp12::before{content:"";position:absolute;top:0;left:18px;right:18px;height:1px;background:repeating-linear-gradient(90deg,#d4af37,#d4af37 8px,transparent 8px,transparent 12px);}
+.spt12{font-size:17px;line-height:2;color:#8b4513;font-family:"KaiTi","STKaiti",serif;margin-bottom:12px;}
+.sst12{position:absolute;bottom:10px;right:10px;width:40px;height:40px;border:2px solid #c41e3a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:#c41e3a;font-weight:700;transform:rotate(-15deg);opacity:.55;}
+.ft12{margin-top:16px;font-size:12px;color:#8b7355;letter-spacing:1px;}
+</style>
+</head>
+<body>
+
+<div class="app" id="app">
+  <div class="prog"><div id="pf"></div></div>
+
+  <!-- P01 -->
+  <div class="pg on p1" id="p01">
+    <div class="star" style="top:8%;left:15%;width:3px;height:3px;"></div>
+    <div class="star" style="top:12%;left:65%;width:4px;height:4px;animation-delay:.5s;"></div>
+    <div class="star" style="top:5%;left:80%;width:3px;height:3px;animation-delay:1s;"></div>
+    <div class="star" style="top:20%;left:40%;width:2px;height:2px;animation-delay:1.5s;"></div>
+    <div style="font-size:12px;color:rgba(255,215,100,.6);letter-spacing:4px;margin-top:18px;">献礼中国共产党成立105周年</div>
+    <div class="t1">请查收一封来自<br>105年前的信</div>
+    <div class="desk">
+      <div class="lamp"><div class="lh"></div><div class="ll"></div><div class="la"></div><div class="lb"></div></div>
+      <div class="env" onclick="go(2)"><div class="est">邮</div><div class="elb">致：105年后的青年</div></div>
+      <div class="books"><div class="book"></div><div class="book"></div><div class="book"></div></div>
+      <div class="papers"></div>
+    </div>
+    <div class="s1">有一封信<br>穿越百年风雨<br>等待今天的你打开</div>
+    <button class="btn-r" onclick="go(2)">开启跨越百年的对话</button>
+    <div class="fy">1921 — 2026 · 以青春赴山河</div>
+  </div>
+
+  <!-- P02 -->
+  <div class="pg p2" id="p02">
+    <button class="bk" onclick="go(1)">← 返回</button>
+    <div class="ink">你好，105年后的青年</div>
+    <div class="sheet">
+      <div class="sh">展信安。我们是一百年前寻路的青年。</div>
+      <div>我们曾在风雨中寻找光明，曾为了理想奔赴远方。<br><br>彼时山河破碎，前路无光，我们踏遍街巷、泛舟南湖，只为寻找救中国的方向。我们以血肉为灯，以理想为火，在漫漫长夜里点亮一点星火。<br><br>如今百年流转，山河换新颜，这封信跨越时光来到你手中。今日的时代，交由你们书写；先辈未尽的理想，等待你给出青春答案。</div>
+      <div style="text-align:right;margin-top:12px;font-size:12px;color:#8b7355;font-style:italic;">—— 一百年前寻路的青年</div>
+      <svg class="fp" viewBox="0 0 60 60"><path d="M45,5 Q55,25 40,45 Q30,55 10,65 L5,68 L8,62 Q0,52 10,42 Q20,32 30,22 Q38,12 45,5Z" fill="#8b7355"/></svg>
+    </div>
+    <div style="font-size:12px;color:#8b7355;margin-top:12px;display:flex;align-items:center;gap:5px;justify-content:center;">
+      <svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 2v10M3 8l4 4 4-4" stroke="#8b7355" fill="none" stroke-width="1.5"/></svg>
+      上下滑动，展开整封信
+    </div>
+    <button class="btn-r" onclick="go(3)">继续阅读</button>
+  </div>
+
+  <!-- P03 -->
+  <div class="pg p3" id="p03">
+    <button class="bk" onclick="go(2)">← 返回</button>
+    <div class="t3">第一笔：写下初心</div>
+    <div class="s3">一叶红船，开启百年征程</div>
+    <div class="mapb">
+      <svg class="map-svg" viewBox="0 0 260 210">
+        <defs><linearGradient id="mg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#d4af37;stop-opacity:.3"/><stop offset="100%" style="stop-color:#b8860b;stop-opacity:.1"/></linearGradient></defs>
+        <path d="M45,55 Q65,35 105,45 T185,40 T245,55 Q255,75 245,95 T225,135 Q205,155 165,150 T105,145 Q65,140 55,115 T45,55Z" fill="url(#mg)" stroke="#d4af37" stroke-width="1.2" stroke-dasharray="5,4" opacity="0.7"/>
+        <path d="M168,68 Q178,80 188,92" fill="none" stroke="#c41e3a" stroke-width="1.5" stroke-dasharray="4,3" opacity="0" id="rp3"/>
+        <text x="168" y="62" fill="#8b4513" font-size="10" font-weight="600" text-anchor="middle">上海</text>
+        <text x="192" y="108" fill="#8b4513" font-size="10" font-weight="600" text-anchor="middle">嘉兴</text>
+      </svg>
+      <div class="md" id="dsh" style="left:60%;top:29%;" onclick="cd('sh')"><div class="rp"></div></div>
+      <div class="md" id="djx" style="left:69%;top:42%;" onclick="cd('jx')"><div class="rp"></div></div>
+      <div class="ml" style="left:58%;top:23%;">上海</div>
+      <div class="ml" style="left:71%;top:48%;">嘉兴</div>
+      <div class="pop" id="psh"><div class="py">1921 · 上海</div><div class="pt">石库门里开天辟地</div><div class="px">十三位青年代表在此聚首，点燃中国革命的第一簇火种</div></div>
+      <div class="pop" id="pjx"><div class="py">1921 · 嘉兴南湖</div><div class="pt">红船启航，初心始发</div><div class="px">一叶小小红船，承载亿万民族的希望，拉开百年奋斗序章</div></div>
+      <div class="boat3"><div class="cb"></div><div class="bb"></div><div class="bf"></div><div class="bw"></div></div>
+    </div>
+    <div class="hint3">
+      <svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" stroke="#c41e3a" stroke-width="1.5" fill="none"/><text x="7" y="10" text-anchor="middle" fill="#c41e3a" font-size="8" font-weight="700">!</text></svg>
+      点击地图上的红色坐标，点亮初心记忆
+    </div>
+    <div class="v3"><div class="vl">一叶红船，承载民族希望；</div><div class="vl">一群青年，开启百年征程。</div></div>
+    <button class="btn-r btn-d" id="b3" onclick="go(4)">滑动，走进百年征程</button>
+  </div>
+
+  <!-- P04 -->
+  <div class="pg p4" id="p04">
+    <button class="bk" onclick="go(3)">← 返回</button>
+    <div class="t4">百年路上的重要坐标</div>
+    <div class="s4">一封封家书，记下时代的脚步</div>
+    <div class="scr">
+      <div class="srt"></div>
+      <div class="sp">
+        <div class="tln"></div>
+        <div class="ttg" style="left:6%;top:12%;" onclick="ev('1919 五四运动爆发')"><span class="y">1919</span>五四运动爆发<div class="ws" style="right:-10px;top:50%;transform:translateY(-50%);"></div></div>
+        <div class="ttg" style="right:6%;top:32%;" onclick="ev('1935 一二九运动')"><span class="y">1935</span>一二九运动<div class="ws" style="left:-10px;top:50%;transform:translateY(-50%);"></div></div>
+        <div class="ttg" style="left:6%;top:52%;" onclick="ev('1921 中国共产党成立')"><span class="y">1921</span>中国共产党成立<div class="ws" style="right:-10px;top:50%;transform:translateY(-50%);"></div></div>
+        <div class="ttg" style="right:6%;top:72%;" onclick="ev('1978 改革开放开启')"><span class="y">1978</span>改革开放开启<div class="ws" style="left:-10px;top:50%;transform:translateY(-50%);"></div></div>
+      </div>
+      <div class="srb"></div>
+    </div>
+    <div class="eb" id="eb4">点击标签，读懂一段峥嵘岁月</div>
+    <button class="btn-r" onclick="go(5)">继续旅程</button>
+  </div>
+
+  <!-- P05 -->
+  <div class="pg p5" id="p05">
+    <button class="bk" onclick="go(4)">← 返回</button>
+    <div style="font-size:13px;color:#d4af37;letter-spacing:4px;margin-bottom:6px;">第二笔：写下信仰</div>
+    <div class="g5">伟大建党精神</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.65);margin-bottom:10px;max-width:270px;">百年风雨何以无惧？只因心中信仰如炬</div>
+    <div class="sg5">
+      <div class="sc5" onclick="ts(this)"><div class="wsd"></div><div class="t5">坚持真理</div><div class="d5">不惧黑暗与压迫，追求救国真理，实事求是，永不动摇。</div></div>
+      <div class="sc5" onclick="ts(this)"><div class="wsd"></div><div class="t5">坚守理想</div><div class="d5">心怀复兴宏愿，哪怕前路荆棘密布，始终向着光明前行。</div></div>
+      <div class="sc5" onclick="ts(this)"><div class="wsd"></div><div class="t5">践行初心</div><div class="d5">始终把人民放在心中，一切奋斗只为百姓安康、家国安定。</div></div>
+      <div class="sc5" onclick="ts(this)"><div class="wsd"></div><div class="t5">担当使命</div><div class="d5">青年当扛起时代重担，危难向前，勇担民族复兴重任。</div></div>
+    </div>
+    <div style="font-size:12px;color:#d4af37;opacity:.7;margin-top:8px;letter-spacing:2px;">—— 信仰不灭，薪火相传 ——</div>
+    <button class="btn-r" onclick="go(6)">聆听先辈故事</button>
+  </div>
+
+  <!-- P06 -->
+  <div class="pg p6" id="p06">
+    <button class="bk" onclick="go(5)">← 返回</button>
+    <div class="t6">他们这样回答初心</div>
+    <div class="s6">四个故事，读懂信仰如何延续</div>
+    <div class="g6">
+      <div class="c6" onclick="tg6(this)">
+        <div class="wx6"></div><div class="ed6"></div>
+        <div class="i6 f"><svg viewBox="0 0 48 48"><path d="M24 6C24 6 12 20 12 30C12 36.6 17.4 42 24 42C30.6 42 36 36.6 36 30C36 20 24 6 24 6Z" fill="#ffd700" opacity="0.9"/><path d="M24 14C24 14 16 24 16 31C16 35 19.6 38 24 38C28.4 38 32 35 32 31C32 24 24 14 24 14Z" fill="#ff6b35" opacity="0.8"/><path d="M24 22C24 22 20 28 20 32C20 34.2 21.8 36 24 36C26.2 36 28 34.2 28 32C28 28 24 22 24 22Z" fill="#fff5e0"/></svg></div>
+        <div class="b6"><div class="tt6">信仰之火</div><div class="tl6">微光汇聚，终成星河</div></div>
+      </div>
+      <div class="c6" onclick="tg6(this)">
+        <div class="wx6"></div><div class="ed6"></div>
+        <div class="i6 r"><svg viewBox="0 0 48 48"><path d="M8 40L18 8H22L14 40H8Z" fill="#f5e6c8" opacity="0.9"/><path d="M26 40L36 8H40L32 40H26Z" fill="#f5e6c8" opacity="0.9"/><rect x="20" y="8" width="8" height="32" fill="#d4a574" opacity="0.6"/><circle cx="24" cy="14" r="3" fill="#ffd700"/><circle cx="24" cy="26" r="3" fill="#ffd700"/><circle cx="24" cy="38" r="3" fill="#ffd700"/></svg></div>
+        <div class="b6"><div class="tt6">奋斗之路</div><div class="tl6">微光汇聚，终成星河</div></div>
+      </div>
+      <div class="c6" onclick="tg6(this)">
+        <div class="wx6"></div><div class="ed6"></div>
+        <div class="i6 h"><svg viewBox="0 0 48 48"><path d="M24 42L22 40C10 29.5 4 23.5 4 16C4 10 8.5 5.5 14 5.5C17.5 5.5 21 7.5 24 11C27 7.5 30.5 5.5 34 5.5C39.5 5.5 44 10 44 16C44 23.5 38 29.5 26 40L24 42Z" fill="#fff0f0" opacity="0.95"/><path d="M24 38L22.5 36.5C13 27.5 8 22.5 8 16.5C8 12 11 9 15 9C17.8 9 20.5 10.5 24 14C27.5 10.5 30.2 9 33 9C37 9 40 12 40 16.5C40 22.5 35 27.5 25.5 36.5L24 38Z" fill="#e74c3c" opacity="0.9"/></svg></div>
+        <div class="b6"><div class="tt6">人民情怀</div><div class="tl6">微光汇聚，终成星河</div></div>
+      </div>
+      <div class="c6" onclick="tg6(this)">
+        <div class="wx6"></div><div class="ed6"></div>
+        <div class="i6 d"><svg viewBox="0 0 48 48"><polygon points="24,4 28,18 42,18 30,26 34,40 24,32 14,40 18,26 6,18 20,18" fill="#ffd700" opacity="0.95"/><polygon points="24,10 26.5,18 34,18 28,23 30,31 24,27 18,31 20,23 14,18 21.5,18" fill="#fff8dc"/></svg></div>
+        <div class="b6"><div class="tt6">时代担当</div><div class="tl6">微光汇聚，终成星河</div></div>
+      </div>
+    </div>
+    <button class="btn-r" onclick="go(7)">接过接力棒</button>
+  </div>
+
+  <!-- P07 -->
+  <div class="pg p7" id="p07">
+    <button class="bk" onclick="go(6)">← 返回</button>
+    <div class="ch7"><div class="cl7">NCEPU</div><div class="cn7">华北电力大学<span>NORTH CHINA ELECTRIC POWER UNIVERSITY</span></div></div>
+    <div class="t7">第三笔：写下奋斗</div>
+    <div class="cb7"><div class="bs7"></div></div>
+    <div class="st7">
+      <div class="sp7 l"><div class="si7">🔬</div><div class="sl7">实验室</div></div>
+      <div class="sp7 s"><div class="si7">📚</div><div class="sl7">校园书桌</div></div>
+      <div class="sp7 v"><div class="si7">🤝</div><div class="sl7">志愿一线</div></div>
+    </div>
+    <div class="bq7">今天，我们接过怎样的接力棒？</div>
+    <div style="font-size:12px;color:#8b7355;margin-bottom:4px;">向上滑动，选择你的青春关键词</div>
+    <button class="btn-r" onclick="go(8)">选择你的青春身份</button>
+  </div>
+
+  <!-- P08 -->
+  <div class="pg p8" id="p08">
+    <button class="bk" onclick="go(7)">← 返回</button>
+    <div class="t6" style="font-size:22px;">选择你的青春关键词</div>
+    <div class="s6">选择一条属于你的青春赛道</div>
+    <div class="idc8" onclick="pid('科研青年','创新',this)"><div class="ic8">🔬</div><div class="in8"><div class="nm8">科研青年</div><div class="idb8">创新</div></div></div>
+    <div class="idc8" onclick="pid('志愿青年','奉献',this)"><div class="ic8">❤️</div><div class="in8"><div class="nm8">志愿青年</div><div class="idb8">奉献</div></div></div>
+    <div class="idc8" onclick="pid('奋斗青年','拼搏',this)"><div class="ic8">📖</div><div class="in8"><div class="nm8">奋斗青年</div><div class="idb8">拼搏</div></div></div>
+    <button class="btn-r btn-d" id="b8" onclick="go(9)">点击卡片继续</button>
+  </div>
+
+  <!-- P09 -->
+  <div class="pg p9" id="p09">
+    <button class="bk" onclick="go(8)">← 返回</button>
+    <div class="nh9"><div class="et9">如果105年前的青年问你<br>新时代青年应该如何奋斗？</div><div class="ee9"></div></div>
+    <div class="ac9" onclick="pan('坚定理想',this)"><div class="al9">A</div><div class="at9">坚定理想</div></div>
+    <div class="ac9" onclick="pan('努力学习',this)"><div class="al9">B</div><div class="at9">努力学习</div></div>
+    <div class="ac9" onclick="pan('勇于创新',this)"><div class="al9">C</div><div class="at9">勇于创新</div></div>
+    <div class="ac9" onclick="pan('服务社会',this)"><div class="al9">D</div><div class="at9">服务社会</div></div>
+    <div style="font-size:12px;color:#8b7355;margin-top:6px;">点击选项，记录你的青春答案</div>
+    <button class="btn-r btn-d" id="b9" onclick="go(10)">书写青春答卷</button>
+  </div>
+
+  <!-- P10 -->
+  <div class="pg p10" id="p10">
+    <button class="bk" onclick="go(9)">← 返回</button>
+    <div class="spk" style="top:10%;left:20%;"></div>
+    <div class="spk" style="top:20%;left:70%;animation-delay:1s;"></div>
+    <div class="spk" style="top:60%;left:15%;animation-delay:2s;"></div>
+    <div class="spk" style="top:80%;left:75%;animation-delay:.5s;"></div>
+    <div class="t10">这是属于你的青春回答</div>
+    <div class="mf10">
+      <div class="pm10">2026<br>青春</div>
+      <div class="mt10" id="mv">我愿坚定理想<br>在新时代征程中<br>贡献青春力量</div>
+      <div class="mff10">2026，致105年前寻路的青年先辈</div>
+    </div>
+    <button class="btn-r" onclick="go(11)">保存青春宣言卡片</button>
+  </div>
+
+  <!-- P11 -->
+  <div class="pg p11" id="p11">
+    <button class="bk" onclick="go(10)">← 返回</button>
+    <div class="flp" style="left:8%;animation-delay:0s;"></div>
+    <div class="flp" style="left:25%;animation-delay:1.2s;"></div>
+    <div class="flp" style="left:55%;animation-delay:2.5s;"></div>
+    <div class="flp" style="left:78%;animation-delay:3.8s;"></div>
+    <div class="flp" style="left:40%;animation-delay:5s;"></div>
+    <div class="t11">第五笔：写给未来</div>
+    <div class="ec11">
+      <div class="er11"></div>
+      <svg viewBox="0 0 120 120" style="width:100%;height:100%;">
+        <defs><linearGradient id="g11" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#ffd700"/><stop offset="100%" style="stop-color:#d4af37"/></linearGradient></defs>
+        <circle cx="60" cy="60" r="52" fill="none" stroke="url(#g11)" stroke-width="2" opacity=".4"/>
+        <path d="M60,18 L64,42 L88,42 L68,56 L76,80 L60,66 L44,80 L52,56 L32,42 L56,42 Z" fill="url(#g11)" opacity=".95"/>
+        <text x="60" y="102" text-anchor="middle" fill="#d4af37" font-size="9" font-weight="500">为人民服务</text>
+      </svg>
+    </div>
+    <div class="fv11"><span>百年前</span><br>他们写下初心<br><span>今天</span><br>我们接续奋斗<br><span>未来</span><br>我们继续回答</div>
+    <div class="fs11">红船星火不灭，青年步履不停</div>
+    <button class="btn-r" onclick="go(12)">生成我的青春寄语</button>
+  </div>
+
+  <!-- P12 -->
+  <div class="pg p12" id="p12">
+    <div class="t12">我的青春寄语</div>
+    <div class="s12">保存专属青春卡片，转发身边青年</div>
+    <div class="sl12">
+      <div class="sen12"></div>
+      <div class="sw12">★</div>
+      <div class="spp12">
+        <div class="spt12" id="sv">以青春之名，回答百年初心<br>在今天的岗位上，继续向前</div>
+        <div class="sst12">2026<br>青春</div>
+      </div>
+    </div>
+    <button class="btn-r" onclick="alert('已保存到相册（演示）')">保存我的青春宣言</button>
+    <button class="btn-o" onclick="alert('已复制分享文案（演示）')">分享给更多青年</button>
+    <div class="ft12">—— 一纸跨百年，青春答初心 ——</div>
+  </div>
+</div>
+
+<script>
+let cp=1,tp=12,ui='',uk='',ua='';
+function go(n){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.getElementById('p'+String(n).padStart(2,'0')).classList.add('on');
+  cp=n;document.getElementById('pf').style.width=(n/tp*100)+'%';
+  if(n===10)gen();if(n===12)upd();
+}
+function ev(t){document.getElementById('eb4').textContent=t;}
+function ts(el){el.classList.toggle('o');}
+function tg6(el){el.style.transform=el.style.transform?'':'scale(1.04)';el.style.boxShadow=el.style.boxShadow?'':'0 8px 24px rgba(0,0,0,.18)';}
+function pid(name,kw,el){ui=name;uk=kw;document.querySelectorAll('.idc8').forEach(c=>c.classList.remove('pk'));el.classList.add('pk');document.getElementById('b8').classList.add('on');}
+function pan(ans,el){ua=ans;document.querySelectorAll('.ac9').forEach(c=>c.classList.remove('pk'));el.classList.add('pk');document.getElementById('b9').classList.add('on');}
+
+let shC=false,jxC=false;
+function cd(city){
+  if(city==='sh'){
+    document.getElementById('psh').classList.add('show');
+    document.getElementById('pjx').classList.remove('show');
+    document.getElementById('dsh').classList.add('da');
+    shC=true;document.getElementById('rp3').style.opacity='0.6';
+    setTimeout(()=>document.getElementById('psh').classList.remove('show'),3500);
+  }
+  if(city==='jx'){
+    document.getElementById('pjx').classList.add('show');
+    document.getElementById('psh').classList.remove('show');
+    document.getElementById('djx').classList.add('da');
+    jxC=true;document.getElementById('rp3').style.opacity='0.6';
+    setTimeout(()=>document.getElementById('pjx').classList.remove('show'),3500);
+  }
+  if(shC||jxC)document.getElementById('b3').classList.add('on');
+}
+
+function gen(){
+  const t={'科研青年':{'坚定理想':'我愿坚定理想，深耕科研赛道，以创新突破难关，以青年智慧助力强国建设，不负先辈百年期盼。','努力学习':'我愿坚定理想，深耕科研赛道，以勤学夯实根基，以青年智慧助力强国建设，不负先辈百年期盼。','勇于创新':'我愿坚定理想，深耕科研赛道，以创新突破难关，以青年智慧助力强国建设，不负先辈百年期盼。','服务社会':'我愿坚定理想，深耕科研赛道，以服务社会为己任，以青年智慧助力强国建设，不负先辈百年期盼。'},'志愿青年':{'坚定理想':'我愿坚守奉献初心，扎根基层服务人民，以坚定理想指引方向，用实际行动回应百年前的青年理想。','努力学习':'我愿坚守奉献初心，扎根基层服务人民，以勤学苦练提升本领，用实际行动回应百年前的青年理想。','勇于创新':'我愿坚守奉献初心，扎根基层服务人民，以创新思维开拓服务新局，用实际行动回应百年前的青年理想。','服务社会':'我愿坚守奉献初心，扎根基层服务人民，以点滴微光温暖时代，用实际行动回应百年前的青年理想。'},'奋斗青年':{'坚定理想':'我愿以拼搏为底色，坚定理想信念，勤学苦练锤炼本领，脚踏实地奋勇向前，以青春之力续写复兴华章。','努力学习':'我愿以拼搏为底色，勤学苦练锤炼本领，脚踏实地奋勇向前，以青春之力续写复兴华章。','勇于创新':'我愿以拼搏为底色，勇于创新突破，勤学苦练锤炼本领，脚踏实地奋勇向前，以青春之力续写复兴华章。','服务社会':'我愿以拼搏为底色，服务社会发展，勤学苦练锤炼本领，脚踏实地奋勇向前，以青春之力续写复兴华章。'}};
+  let txt=t[ui]?.[ua]||'百年薪火，青年相传。我将坚守初心、勇担使命，以吾辈青春，护盛世中华。';
+  if(!ui||!ua)txt='百年薪火，青年相传。我将坚守初心、勇担使命，以吾辈青春，护盛世中华。';
+  document.getElementById('mv').innerHTML=txt.replace(/。/g,'。<br>');
+}
+function upd(){document.getElementById('sv').innerHTML=document.getElementById('mv').innerHTML;}
+</script>
+
+</body>
+</html>
